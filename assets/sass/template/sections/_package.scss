@@ -1,0 +1,172 @@
+.packages-layout1 {
+  position: relative;
+  margin-top: 50px;
+}
+
+.offer-pill-2 {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  z-index: 1;
+  background-color: $theme-color;
+  color: $white-color;
+  text-align: center;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  --border-pill: -10px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: var(--border-pill);
+    right: var(--border-pill);
+    top: var(--border-pill);
+    bottom: var(--border-pill);
+    border: 2px dashed $white-color;
+    border-radius: inherit;
+    animation: morpspin 30s linear infinite;
+  } 
+
+  .price-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .price {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 4px;
+  }
+}
+
+.package-thumb {
+  position: relative;
+  cursor: pointer;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: $theme-color;
+    opacity: 0.90;
+    transition: all ease 0.4s;
+  }
+
+  &:after {
+    left: auto;
+    right: 0;
+  }
+
+  .thumb-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: $white-color;
+    transform: translate(-50%, -50%);
+    transition: all ease 0.5s;
+    font-size: 28px;
+    opacity: 0;
+    visibility: hidden;
+    z-index:  1;
+  }
+
+}
+
+.package-thumb:hover,
+.slick-current .package-thumb {
+  &:before,
+  &:after {
+    width: 50%;
+  }
+
+  .thumb-icon {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.4s;
+  }
+}
+
+@include hd {
+  .packages-layout1 {
+    margin-top: 0;
+  }
+}
+
+@include ml{
+  .offer-pill-2 {
+    right: 30px;
+    top: 30px;
+    width: 120px;
+    height: 120px;
+    --border-pill: -5px;
+
+    .price {
+      font-size: 20px;
+      margin-top: 4px;
+    }
+
+    .price-label {
+      font-size: 12px;
+    }
+  }
+}
+
+
+@include lg {
+
+  .offer-pill-2 {
+    right: 30px;
+    top: 30px;
+    width: 120px;
+    height: 120px;
+    --border-pill: -5px;
+
+    .price {
+      font-size: 20px;
+      margin-top: 4px;
+    }
+
+    .price-label {
+      font-size: 12px;
+    }
+  }
+}
+
+
+
+
+@include md {
+  .package-thumb-slide {
+    max-width: 100%;
+  }
+
+  .packages-layout1 {
+    padding-bottom: 80px;
+    margin-top: 0;
+    
+    .space {
+      padding-bottom: 10px;
+    }
+  }
+
+}
+
+@include sm {
+  .offer-pill-2 {
+    right: auto;
+    top: auto;
+    left: 30px;
+    bottom: 30px;
+  }
+}

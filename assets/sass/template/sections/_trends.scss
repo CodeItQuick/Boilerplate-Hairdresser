@@ -1,0 +1,122 @@
+.vs-trends-box {
+  position: relative;
+  overflow: hidden;
+
+  .trends-header {
+    background-color: rgba(#ad8858, 0.90);
+    position: absolute;
+    top: 0;
+    left: 10px;
+    bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px 25px;
+    transition: all ease 0.4s;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    line-height: 1;
+  }
+
+  .trends-label {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    margin: 0;
+  }
+
+  .trends-body {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#ad8858, 0.90);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 40px 40px 40px;
+    transition: all ease 0.7s;
+    transform: translateX(110%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .trends-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    font-size: 14px;
+
+    &:hover {
+      background-color: $title-color;
+      color: $white-color;
+    }
+  }
+
+  .trends-title,
+  .trends-label {
+    font-size: 24px;
+    font-weight: 600;
+    color: $white-color;
+  }
+
+  .trends-text {
+    font-size: 16px;
+    color: $white-color;
+    // max-width: 182px;
+  }
+
+  .price {
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 600;
+    color: $white-color;
+  }
+
+  .trends-title,
+  .trends-text {
+    transform: translatex(80px);
+    transition: all ease 0.4s;
+    transition-delay: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .trends-title {
+    transition-delay: 0.2s;
+    margin-bottom: 5px;
+  }
+
+  &:hover {
+    .trends-header {
+      transform: translateX(-150%);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .trends-title,
+    .trends-text,
+    .trends-body {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }    
+  }
+  
+
+}
+
+
+@include md {
+  .vs-trends-box {
+    .trends-body {
+      padding: 25px 30px 30px 30px;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.find-salon-box {
+  position: relative;
+  border: 1px solid var(--box-border-color, #e4e4e4);
+  padding: var(--box-space-y, 45px) var(--box-space-x, 55px);
+  margin-bottom: 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: var(--border-space, 5px);
+    right: var(--border-space, 5px);
+    bottom: var(--border-space, 5px);
+    left: var(--border-space, 5px);
+    border: inherit;
+    z-index: -1;
+  }
+
+  .box-label {
+    font-size: var(--label-font, 18px);
+    color: $theme-color;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 2px;
+    margin-top: -0.3em;
+
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  .find-salon-title {
+    font-weight: 600;
+  }
+
+  .find-salon-text {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 8px;
+  }
+
+  .vs-btn {
+    margin-top: 9px;
+  }
+
+}
+
+
+.find-salon-map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+.find-salon-inner {
+  width: 100%;
+  max-width: 575px;
+  margin-left: auto;
+  padding-right: 106px;
+}
+
+
+
+@include ml {
+  .find-salon-inner {
+    width: 100%;
+    max-width: 575px;
+    padding-right: 60px;
+  }
+}
+
+
+
+@include lg {
+  .find-salon-inner {
+    width: 100%;
+    max-width: 575px;
+    padding-right: 0;
+  }
+}
+
+
+@include md {
+  .find-salon-inner {
+    max-width: 100%;
+  } 
+
+  .find-salon-box {
+    --box-space-y: 40px;
+    --box-space-x: 20px;
+
+    .box-label {
+      margin-bottom: 5px;
+    }
+
+    .find-salon-text {
+      max-width: 100%;
+    }
+
+    .find-salon-title {
+      margin-bottom: 10px;
+    }
+  }
+
+}

@@ -1,0 +1,55 @@
+.error-number {
+  font-size: 274px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 35px;
+}
+
+.error-title {
+  font-size: 26px;
+  margin-bottom: 3px;
+}
+
+.error-text {
+  font-size: 20px;
+}
+.vs-error-wrapper {
+  padding-top: calc(var(--section-space) + 105px);
+}
+@include lg {
+  .vs-error-wrapper {
+    padding-top: calc(var(--section-space) + 28px);
+  }
+
+  .error-number {
+    font-size: 190px;
+  }
+}
+
+
+@include md {
+  .error-number {
+    font-size: 140px;
+    margin-bottom: 20px;
+  }
+
+  .error-title {
+    font-size: 22px;
+  }
+
+  .vs-error-wrapper {
+    padding-top: var(--section-space);
+  }
+}
+
+@include sm {
+  .vs-error-wrapper {
+    padding-top: 80px;
+  }
+
+  .error-number {
+    font-size: 100px;
+    margin-bottom: 20px;
+    margin-top: -0.35em;
+  }
+}

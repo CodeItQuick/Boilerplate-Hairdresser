@@ -1,0 +1,153 @@
+.process-box {
+  position: relative;
+  padding: 30px 0;
+  --border-gap: 9px;
+  --border-size: 5px;
+
+
+  .process-img {
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.4s;
+    transform: scale(1.01);
+    
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $black-color;
+      opacity: 0.30;
+      transition: all ease 0.4s;
+    }
+  }
+
+  
+  .process-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .process-title {
+    font-size: 21px;
+    color: $white-color;
+    margin: 0;
+  }
+
+  .process-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: $white-color;
+    color: $title-color;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    transition: all ease 0.4s;
+
+    &:hover {
+      background-color: $title-color;
+      color: $white-color;
+    }
+  }
+
+
+  .process-border {
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      left: var(--border-gap);
+      top: var(--border-gap);
+      height: var(--border-size);
+      width: calc(100% - (var(--border-gap) * 2));
+      background-color: $white-color;
+      background-color: $white-color;
+      z-index: 2;
+      transition: all ease 0.4s;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+    }
+    
+    &:after {
+      transform: scaleY(0);
+      width: var(--border-size);
+      height: calc(100% - (var(--border-gap) * 2));
+    }
+
+
+    &.border2 {
+      &:after,
+      &:before {
+        left: auto;
+        right: var(--border-gap);
+        top: auto;
+        bottom: var(--border-gap);
+        transform-origin: 100% 100%;
+      }
+    }
+  }
+
+
+  &:hover {
+    .process-img {
+      transform: scale(1.12);
+
+      &:before {
+        background-color: $theme-color;
+        opacity: 0.90;
+      }
+    } 
+
+    .process-btn {
+      bottom: 40px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+    .process-border {
+      &:before {
+        transform: scaleX(1);
+      }
+
+      &:after {
+        transform: scaleY(1);
+      }
+    }
+  }
+  
+}
+
+
+@include lg {
+  .process-box {
+    .process-title {
+      font-size: 18px;
+    }
+  }
+}
+
+@include md {
+  .process-box {
+    padding: 20px 0;
+    
+    &:hover .process-img,
+    .process-img {
+      transform: scale(1);
+    }
+  }
+}

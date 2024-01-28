@@ -1,0 +1,241 @@
+.ani-moving-x,
+.ani-moving-y,
+.ani-moving {
+  animation-duration: var(--moving-ani-duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.ani-moving {
+  animation-name: moving;
+}
+
+.ani-moving-x {
+  animation-name: moving-x;
+}
+
+.ani-moving-y {
+  animation-name: moving-y;
+}
+
+
+
+.ripple-animation {
+  animation-duration: var(--ripple-ani-duration);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-name: ripple;
+}
+
+.morp-ani {
+  --morp-value: 66% 24% 44% 56% / 44% 24% 70% 56%;
+  --morp-md-value: 43% 38% 39% 35% / 44% 39% 43% 56%;
+  --morp-time: 8s;
+  --morp-spin-time: 20s;
+  animation: morpspin var(--morp-spin-time) linear infinite reverse;
+
+  &:before {
+    animation: vsmorph var(--morp-time) ease-in-out infinite both alternate;
+  }
+}
+
+
+.transform-banner img {
+  animation: border-transform 10s linear infinite alternate forwards;
+  border-radius: 100%;
+}
+
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.40;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+
+  100% {
+    border-radius: 40% 60%;
+  }
+}
+
+
+@keyframes vsmorph {
+  0% {
+    border-radius: var(--morp-value);
+  }
+
+  50% {
+    border-radius: var(--morp-md-value);
+  }
+
+  100% {
+    border-radius: 40% 60%;
+  }
+}
+
+
+@keyframes vsheromorph {
+  0% {
+    border-radius: 25% 80% 57% 47% / 53% 60% 43% 52%;
+  }
+
+  50% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+
+  100% {
+    border-radius: 40% 60%;
+  }
+}
+
+
+@keyframes morpspin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes border-transform {
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+
+  14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+
+  28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+
+  42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+
+  56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+
+  70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+
+  84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+}
+
+
+@keyframes moving {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  20% {
+    transform: translate(0px, -60px);
+  }
+
+  50% {
+    transform: translate(-60px, -60px);
+  }
+
+  70% {
+    transform: translate(-60px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+@keyframes moving-y {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0, -60px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes moving-x {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(-60px, 0);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+
+
+@keyframes arrow-left {  
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-20px);
+  }
+
+  40% {
+    transform: translateX(0);
+  }
+
+  60% {
+    transform: translateX(-20px);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes arrow-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(20px);
+  }
+
+  40% {
+    transform: translateX(0);
+  }
+
+  60% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

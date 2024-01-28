@@ -1,0 +1,131 @@
+.vs-banner-slide {
+  --shape-size: 370px;
+  --morp-color: #907bf6;
+  --morp-delay: 1s;
+  padding-top: var(--padding-y, 80px);
+  padding-bottom: var(--padding-y, 80px);
+  position: relative;
+  margin-bottom: 30px;  
+
+  .banner-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: $white-color;
+  }
+
+  .media-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 290px;
+    width: 100%;
+  }
+
+  .banner-text {
+    margin-bottom: 0;
+    color: $white-color;
+  }
+
+  .banner-morp {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    --morp-value: 66% 24% 44% 56% / 44% 24% 70% 56%;
+    --morp-time: 12s;
+    --morp-spin-time: 16s;
+    width: var(--shape-size);
+    height: var(--shape-size);
+    margin: calc(var(--shape-size) / -2) 0 0 calc(var(--shape-size) / -2);
+    animation-delay: var(--morp-delay);
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--morp-color);
+      opacity: 0.90;
+      border-radius: 66% 24% 44% 56% / 44% 24% 70% 56%;
+    }
+  }
+
+  &:nth-child(3n + 3) {
+    --morp-color: #e280d2;
+  }
+
+  &:nth-child(3n + 2) {
+    --morp-color: #ff708b;
+    --morp-delay: 5s;
+  }
+
+  &:nth-child(3n + 1) {
+    --morp-color: #907bf6;
+    --morp-delay: 8s;
+  }
+}
+
+
+
+
+@include ml {
+  .vs-banner-slide {
+    --shape-size: 270px;
+    --padding-y: 40px;
+
+    .banner-title {
+      font-size: 30px;
+    }
+  }
+}
+
+@include lg {
+  .vs-banner-slide {
+    --padding-y: 0;
+    
+    .banner-morp {
+      animation: none;
+      width: auto;
+      height: auto;
+      left: calc(var(--bs-gutter-x) / 2);
+      right: calc(var(--bs-gutter-x) / 2);
+      height: 100%;
+      top: auto;
+      bottom: 0;
+      margin: 0;
+      
+      &:before {
+        background-color: transparent;
+        background-image: linear-gradient(95deg, var(--morp-color) 20%, rgba(0,0,0,0) 100%);
+        border-radius: 0;
+        animation: none;
+      }
+    }
+
+    .media-content {
+      left: calc(var(--bs-gutter-x) / 2);
+      top: 50%;
+      text-align: left;
+      padding-left: 30px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+
+@include xs {
+  .vs-banner-slide {
+    .banner-title {
+      font-size: 24px;
+    }
+
+    .media-content {
+      padding-left: 20px;
+    }
+  }
+}

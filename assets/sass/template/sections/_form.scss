@@ -1,0 +1,82 @@
+.form-media {
+  display: flex;
+  align-items: center;
+  margin-bottom: 42px;
+
+  .media-icon {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    text-align: center;
+    background-color: $theme-color;
+    color: $white-color;
+    font-size: 28px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .media-text {
+    color: $white-color;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .media-title {
+    font-size: 30px;
+    color: $white-color;
+    margin: 0;
+  }
+}
+
+
+.form-style1 {
+  background-color: #f3eee6;
+  padding: 50px;
+
+  .form-control {
+    border-radius: 0;
+    border: none;
+    padding-left: 30px;
+
+    ~ i {
+      right: 40px;
+    }
+  } 
+
+  select {
+    background-position: right 26px center;
+  }
+
+  .vs-btn {
+    border-radius: 0;
+  }
+}
+
+
+@include sm {
+  .form-media {
+    .media-title {
+      font-size: 26px;
+    }
+
+    .media-text {
+      font-size: 14px;
+    }
+
+    .media-icon {
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      font-size: 20px;
+      margin-right: 15px;
+    }
+  }
+
+
+  .form-style1 {
+    padding: 45px 20px;
+  }
+
+
+}

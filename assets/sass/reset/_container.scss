@@ -1,0 +1,77 @@
+@media only screen and (min-width: 1300px) {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: calc(var(--main-container) + var(--container-gutters));
+    padding-left: calc(var(--container-gutters) / 2);
+    padding-right: calc(var(--container-gutters) / 2);
+  }
+}
+
+
+@media only screen and (max-width: 1600px) {
+  .container-fluid.px-0 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+
+    .row {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+
+@media (min-width: 1700px) {
+  .vs-container {
+    --main-container: 1663px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .vs-container {
+    --main-container: 1400px;
+  }
+}
+
+
+
+@media (min-width: 1300px) {
+  .vs-container-style2 {
+    --main-container: 1850px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1500px) {
+  .vs-container-style3 {
+    --main-container: 1440px;
+  }
+}
+
+@media (min-width: 1501px) {
+  .vs-container-style2 {
+    --main-container: 1523px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 2000px) {
+  .vs-container-style2 {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $md) and (max-width: $lg) {
+  .vs-container-style2 {
+    margin-right: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+}

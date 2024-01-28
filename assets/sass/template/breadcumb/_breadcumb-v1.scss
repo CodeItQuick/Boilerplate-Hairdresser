@@ -1,0 +1,155 @@
+.breadcumb-menu {
+  max-width: 100%;
+  margin: 0 0 0 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    margin-right: 3px;
+    padding-right: 8px;
+    list-style: none;
+    position: relative;
+
+    &:after {
+      content: '-';
+      margin-left: 13px;
+    }
+
+    &:first-child {
+      &:before {
+        content: '\f015';
+        font-family: $icon-font;
+        width: var(--icon-size, 40px);
+        height: var(--icon-size, 40px);
+        border-radius: 50%;
+        line-height: var(--icon-size, 40px);
+        background-color: $theme-color;
+        font-size: 18px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 15px;
+      }
+    }
+
+
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    
+  }
+
+  li,
+  a,
+  span {
+    white-space: normal;
+    color: inherit;
+    word-break: break-word;
+    font-weight: 400;
+    font-size: 18px;
+    color: $white-color;
+    
+    i {
+      margin-right: 5px;
+      font-size: 0.8rem;
+      position: relative;
+      top: -1px;
+    }    
+  }
+}
+
+
+.breadcumb-title {
+  font-size: 72px;
+  font-weight: 600;
+  margin-top: -0.3em;
+  color: $white-color;
+  margin-bottom: 10px;
+}
+
+
+.breadcumb-wrapper {
+  padding-top: 360px;
+  padding-bottom: 130px;
+}
+
+
+@include xl {
+  .breadcumb-title {
+    font-size: 60px;
+  }
+
+  .breadcumb-wrapper {
+    padding-top: 320px;
+    padding-bottom: 126px;
+  }
+}
+
+@include ml {
+  .breadcumb-title {
+    font-size: 48px;
+  }
+}
+
+@include lg {
+  .breadcumb-wrapper {
+    padding-top: 212px;
+    padding-bottom: 126px;
+  }
+
+  .breadcumb-title {
+    font-size: 42px;
+  }
+
+  .breadcumb-menu li,
+  .breadcumb-menu a,
+  .breadcumb-menu span {
+    font-size: 17px;
+  }
+}
+
+@include md {
+  .breadcumb-wrapper {
+    padding-top: 162px;
+    padding-bottom: 76px;
+  }
+
+  .breadcumb-menu li {
+    padding-right: 5px;
+    --icon-size : auto;
+    
+    &:first-child {
+      &:before {
+        background-color: transparent;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .breadcumb-menu li:after {
+    margin-left: 11px;
+  }
+
+  .breadcumb-title {
+    font-size: 36px;
+  }
+}
+
+
+@include sm {
+  .breadcumb-wrapper {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
+  .breadcumb-title {
+    font-size: 28px;
+  }
+}

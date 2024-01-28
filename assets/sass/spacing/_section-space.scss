@@ -1,0 +1,46 @@
+.space,
+.space-top {
+  padding-top: $space;
+}
+
+.space,
+.space-bottom {
+  padding-bottom: $space;
+}
+
+.space-negative,
+.space-negative-top {
+  padding-top: $space-negative;
+}
+
+.space-negative,
+.space-negative-bottom {
+  padding-bottom: $space-negative;
+}
+
+
+@include md {
+  .space,
+  .space-top {
+    padding-top: $space-mobile;
+  }
+
+  .space,
+  .space-bottom {
+    padding-bottom: $space-mobile;
+  }
+
+  .space-negative,
+  .space-negative-top {
+    padding-top: $space-mobile-negative;
+  }
+
+  .space-negative,
+  .space-negative-bottom {
+    padding-bottom: $space-mobile-negative;
+  }
+
+  .space-top-md-none {
+    padding-top: 0;
+  }
+}

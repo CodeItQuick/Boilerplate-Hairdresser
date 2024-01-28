@@ -1,0 +1,142 @@
+.vs-counter {
+  transition: all ease 0.4s;
+
+  .counter-number {
+    font-size: 60px;
+    font-weight: 600;
+    color: $theme-color;
+  }
+
+
+  .counter-icon {
+    margin-bottom: 30px;
+  }
+
+  .counter-text {
+    color: $title-color;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+  &.style2 {
+    border: 1px solid $border-color;
+    padding: 30px 15px;
+
+    &:hover {
+      border-color: $theme-color;
+      background-color: $white-color;
+      box-shadow: 0 0 30px 0 rgba(#000, 0.05);
+    }
+  }
+
+  &.style3 {
+    border: 1px solid transparent;
+    background-color: $white-color;
+    box-shadow: 0 0 30px 0 rgba(#000, 0.05);
+    padding: 30px 15px;
+
+    &:hover {
+      box-shadow: none;
+      border-color: $theme-color;
+    }
+  }
+
+}
+
+
+
+.counter-border {
+  margin-bottom: 25px;
+
+  .vs-counter {
+    border-right: 1px solid #c5c5c5;
+    border-left: 1px solid #c5c5c5;
+    margin: 0 1px;
+  }
+
+  &:first-child {
+    .vs-counter {
+      border-left: none;
+    }
+  }
+  
+  &:last-child {
+    .vs-counter {
+      border-right: none;
+    }
+  }
+
+  @include md {
+    &.col-sm-6:nth-child(even) {
+      .vs-counter {
+        border-right: none;
+      }
+    }
+    &.col-sm-6:nth-child(odd) {
+      .vs-counter {
+        border-left: none;
+      }
+    }
+  }
+
+  @include sm {
+    &.col-sm-6:nth-child(even) {
+      .vs-counter {
+        border-right: none;
+      }
+    }
+    &.col-sm-6:nth-child(odd) {
+      .vs-counter {
+        border-left: none;
+      }
+    }
+  }
+
+  @include xs {
+    margin-bottom: 0;
+    
+    .vs-counter {
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid #c5c5c5;
+      border-top: 1px solid #c5c5c5;
+      padding: 25px 0 20px 0;
+      margin: 1px 0;
+    }
+    
+    .vs-counter .counter-icon {
+      margin-bottom: 13px;
+    }
+
+    &:last-child {
+      margin-bottom: 18px;
+      .vs-counter {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+
+    &:first-child {
+
+      .vs-counter {
+        border-top: none;
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+
+@include lg {
+  .vs-counter {
+    .counter-number {
+      font-size: 44px;
+    }
+
+    .counter-text {
+      font-size: 14px;
+    }
+  }
+}
+
+

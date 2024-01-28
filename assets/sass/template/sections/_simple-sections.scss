@@ -1,0 +1,522 @@
+.vs-info-table {
+  border: 1px solid #e4e4e4;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: var(--border-gap, 4px);
+    left: var(--border-gap, 4px);
+    right: var(--border-gap, 4px);
+    bottom: var(--border-gap, 4px);
+    border: inherit;
+  }
+  
+  table {
+    border: none;
+    margin-bottom: 0;
+    margin: var(--table-gap-y, 25px) var(--table-gap-x, 30px);
+    width: auto;
+  }
+
+  td {
+    vertical-align: top;
+    font-size: var(--font-size, 18px);
+    font-weight: 500;
+    color: $title-color;
+    border: none;
+    padding: var(--td-padding-y, 18px) var(--td-padding-x, 30px);
+
+    &:first-child {
+      width: 35%;
+    }
+
+    &:last-child {
+      width: 60%;
+    }
+  }
+
+  tr {
+    &:nth-child(even) {
+      background-color: var(--td-bg, #f6f6f6);
+    }
+  }
+}
+
+
+.location-form {
+  display: flex;
+  align-items: center;
+  background-color: $white-color;
+  border-radius: 9999px;
+  margin-right: 18px;
+  
+  input {
+    padding: 0 0 0 35px;
+    border: none;
+    font-weight: 500;
+    height: 75px;
+    flex: 1;
+    font-size: 16px;
+    color: $title-color;
+    border-radius: 9999px 0 0 9999px;
+
+    @include inputPlaceholder {
+      color: $title-color;
+    }
+  }
+
+  .vs-btn {
+    height: 60px;
+    line-height: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: -18px;
+    
+    i {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+.banner-box {
+  position: relative;
+  padding: 80px 0;
+  height: 395px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+
+  .banner-content {
+    position: relative;
+    width: max-content;
+    max-width: 340px;
+    z-index: 2;
+    margin: 0 60px;
+  }
+
+  .banner-title {
+    font-size: 34px;
+    font-weight: 600;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    margin-top: -0.2em;
+  }
+
+  .banner-text {
+    margin-bottom: 22px;
+    font-size: 16px;
+  }
+
+  .banner-shape {
+    position: absolute;
+    top: -100px;
+    left: -80px;
+    width: 523px;
+    height: 523px;    
+    animation-duration: 20s;
+  }
+}
+
+
+.shape-delay {
+  .banner-shape {
+    animation-delay: 5s;
+  }
+}
+
+.price-touch {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $title-color;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 20px;
+
+  span {
+    font-size: 28px;
+    color: $theme-color;
+    margin-left: 7px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+  }
+}
+
+
+.naved-thumb {
+  width: var(--thumb-size, 145px);
+  height: var(--thumb-size, 145px);
+  padding: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 2px dashed $white-color;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: rgba(#000, 0.60);
+    border-radius: inherit;
+    transition: all ease 0.4s;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+  }
+
+  img {
+    width: 100%;
+    border-radius: inherit;
+  }
+}
+
+.slick-current {
+  .naved-thumb {
+    &::before {
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+.naved-thumb-slide {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100px;
+  right: 0;
+  padding-left: 20px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.right-choose-wrapper {
+  background-size: 100% auto;
+  background-position: center center;
+}
+
+
+.contact-info-table {  
+  td,
+  th {
+    vertical-align: top;
+    font-size: 18px;
+    font-weight: 500;    
+    padding: 6px 10px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+
+.awards-box {
+  text-align: center;
+  margin-bottom: 26px;
+  
+  .awards-img {
+    overflow: hidden;
+    margin-bottom: 17px;
+    border-radius: 50%;
+  }
+  
+  .awards-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+  
+}
+
+
+.search-inline {
+  position: relative;
+  
+  .form-control {
+    border: none;
+    border-radius: 9999px;
+    height: 70px;
+    padding-left: 35px;
+  }
+
+  button {
+    position: absolute;
+    right: 33px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: $title-color;
+    transition: all ease 0.4s;
+    border-radius: 50%;
+
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+}
+
+.vs-social {
+  --icon-size: 50px;
+  --space-x: 2px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: var(--space-x);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: $white-color;
+    background-color: rgba(0, 0, 0, 0.20);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    line-height: var(--icon-size);
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $black-color;
+      color: $white-color;
+    }
+  }
+
+  &.style2,
+  &.social-white {
+    a {
+      background-color: $theme-color;
+      color: $white-color;
+
+      &:hover {
+        background-color: $white-color;
+        color: $theme-color;
+      }
+    }
+  }
+
+
+  &.style-btn-white {
+    --icon-size: 78px;
+    --space-x: 13px;
+
+    a {
+      background-color: $white-color;
+      color: $theme-color;
+      font-size: 26px;
+
+      &:hover {
+        background-color: $title-color;
+        color: $white-color;
+      }
+    }
+  }
+
+
+  &.style2 {
+    --icon-size: 40px;
+    --space-x: 5px;
+    font-size: 14px;
+  }
+
+
+  &.hover-black {
+    a {
+      &:hover {
+        background-color: $title-color;
+        color: $white-color;
+      }
+    }
+  }
+
+}
+
+
+.social-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 1;
+
+  li {
+    display: inline-block;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: $body-color;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+.vs-brand-layout2 {  
+  &:before {
+    background-image: linear-gradient(to bottom,
+      rgba(#ad8858, 0.15) 0%,
+      rgba(#fff, 1) 30%,
+      rgba(#ad8858, 0.15) 120%
+    );
+  }
+}
+
+@include xl {
+  .right-choose-wrapper {
+    background-size: auto calc(100% - 50px);
+  }
+}
+
+
+@include ml {  
+
+  .naved-thumb-slide {
+    padding-left: 0;
+  }
+}
+
+@include lg {
+  .right-choose-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-size: cover;
+  }
+
+  .naved-thumb-slide {
+    bottom: 40px;
+    --thumb-size: 90px;
+  }
+}
+
+@include md {
+  .banner-box {
+    padding: 20px 0;
+    height: 295px;
+
+    .banner-title {
+      font-size: 26px;
+    }
+
+    .vs-btn {
+      padding: 13px 31px;
+    }
+
+    .banner-content {
+      max-width: 340px;
+      z-index: 2;
+      margin: 0 30px;
+    }
+  }
+
+  .search-inline .form-control {
+    height: 60px;
+  }
+
+  .vs-social{
+    // &.style2,
+    &.style-btn-white {
+      --icon-size: 60px;
+      --space-x: 10px;
+    }
+  }
+}
+
+
+
+@include sm {
+  .location-form {
+    display: block;
+    border-radius: 7px;
+    padding: 20px;
+    margin-right: 0;
+
+    input {
+      margin-bottom: 15px;
+      border-radius: 9999px;
+      height: 60px;
+      border: 1px solid rgba(0, 0, 0, 0.10);
+    }
+
+    .vs-btn {
+      margin-right: 0;
+    }
+  }
+
+  .banner-box {
+    .banner-shape {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      animation: none;
+      border-radius: 0;
+
+      &:before {
+        animation: none;
+      }
+    }
+  }
+
+  .contact-info-table {
+    td,
+    th {
+      font-size: 16px;
+      padding: 2px 7px;
+    }
+  }
+
+  .vs-info-table {
+    --table-gap-y: 2px;
+    --table-gap-x: 2px;
+    --font-size: 14px;
+    --td-padding-y: 6px;
+    --td-padding-x: 10px;
+    --border-gap: 1px;
+  }
+}
+
+
+@include xs {
+  .naved-thumb-slide {
+    padding: 0 20px ;
+    bottom: 0;
+    --thumb-size: 80px;
+  }
+}

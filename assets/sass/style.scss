@@ -1,0 +1,249 @@
+/*
+Template Name: Haarino
+Template URL: https://themeforest.vecuro.com/html/haarino
+Description: Haarino - Barber and Salon HTML Template
+Author: Vecuro
+Author URI: https://themeforest.net/user/vecuro_themes
+Version: 1.0.0
+*/
+/*=================================
+    CSS Index Here
+==================================*/
+/*
+
+01. Theme Base
+    1.1. Variable
+    1.2. Mixin
+    1.3. Function
+    1.4. Typography
+    1.5. Extend
+02. Reset
+    2.1. Container
+    2.2. Grid
+    2.3. Input
+    2.4. Slick Slider
+    2.5. Mobile Menu
+03. Utilities
+    3.1. Preloader
+    3.2. Buttons
+    3.3. Titles
+    3.4. Common
+    3.6. Font
+    3.7. Background
+    3.8. Text Color
+    3.9. Overlay
+    3.10. Animation
+04. Template Style
+    4.1. Widget
+    4.2. Header
+    4.3. Footer
+    4.4. Breadcumb
+    4.5. Pagination
+    4.6. Blog
+    4.7. Comments
+    4.8. Hero Area
+    4.9. Banner Style
+    4.10. About
+    4.11. Price Plan
+    4.12. Subscribe
+    4.13. Team
+    4.14. Testimonial
+    4.15. Package
+    4.16. Work Process
+    4.17. Simple Sections
+    4.18. Offers
+    4.19. Counter
+    4.20. Wocommerce
+    4.21. Products
+    4.22. Trends
+    4.23. Gallery
+    4.24. Error
+    4.25. Find Salon
+    4.26. Service Area
+    4.27. Form Styles
+    4.28. Feature
+    4.29. Popup Side Menu
+    8.30. Popup Search
+05. Spacing
+
+*/
+/*=================================
+    CSS Index End
+==================================*/
+
+
+/*=================================
+   01. Theme Base
+==================================*/
+/*------------------- 1.1. Variable-------------------*/
+@import 'base/variable';
+
+/*------------------- 1.2. Mixin -------------------*/
+@import 'base/mixin';
+
+/*------------------- 1.3. Function -------------------*/
+@import 'base/function';
+
+/*------------------- 1.5. Typography -------------------*/
+@import 'base/typography';
+
+/*------------------- 1.6. Extend -------------------*/
+@import 'base/extend';
+
+
+/*=================================
+    02. Reset
+==================================*/
+/*------------------- 2.1. Container -------------------*/
+@import 'reset/container';
+
+/*------------------- 2.2. Grid -------------------*/
+@import 'reset/grid';
+
+/*------------------- 2.3. Input -------------------*/
+@import 'reset/input';
+
+/*------------------- 2.4. Slick Slider -------------------*/
+@import 'reset/slick-slider';
+
+/*------------------- 2.5. Mobile Menu -------------------*/
+@import 'reset/vsmenu';
+
+
+
+
+/*=================================
+    03. Utilities
+==================================*/
+/*------------------- 3.1. Preloader -------------------*/
+@import 'utilities/preloader';
+
+/*------------------- 3.2. Buttons -------------------*/
+@import 'utilities/btns';
+
+/*------------------- 3.3. Titles -------------------*/
+@import 'utilities/titles';
+
+/*------------------- 3.4. Common -------------------*/
+@import 'utilities/common';
+
+/*------------------- 3.6. Font -------------------*/
+@import 'utilities/font';
+
+/*------------------- 3.7. Background -------------------*/
+@import 'utilities/background';
+
+/*------------------- 3.8. Text Color -------------------*/
+@import 'utilities/text-color';
+
+/*------------------- 3.9. Overlay -------------------*/
+@import 'utilities/overlay';
+
+/*------------------- 3.10. Animation -------------------*/
+@import 'utilities/animation';
+
+
+/*=================================
+    04. Template Style
+==================================*/
+/*------------------- 4.1. Widget  -------------------*/
+@import 'template/widgets/widget-default-list';
+@import 'template/widgets/widget-sidebar';
+@import 'template/widgets/widget-footer';
+
+
+/*------------------- 4.2. Header  -------------------*/
+@import 'template/headers/header';
+
+
+/*------------------- 4.3. Footer  -------------------*/
+@import 'template/footers/footer';
+
+
+/*------------------- 4.4. Breadcumb  -------------------*/
+@import 'template/breadcumb/breadcumb-v1';
+
+
+/*------------------- 4.5. Pagination  -------------------*/
+@import 'template/sections/pagination-v1';
+
+/*------------------- 4.6. Blog  -------------------*/
+@import 'template/sections/blog';
+
+/*------------------- 4.7. Comments  -------------------*/
+@import 'template/sections/comments';
+
+/*------------------- 4.8. Hero Area  -------------------*/
+@import 'template/sections/hero';
+
+/*------------------- 4.9. Banner Style  -------------------*/
+@import 'template/sections/banner';
+
+/*------------------- 4.10. About  -------------------*/
+@import 'template/sections/about';
+
+/*------------------- 4.11. Price Plan  -------------------*/
+@import 'template/sections/price-plan';
+
+/*------------------- 4.12. Subscribe  -------------------*/
+@import 'template/sections/subscribe';
+
+/*------------------- 4.13. Team  -------------------*/
+@import 'template/sections/team';
+
+/*------------------- 4.14. Testimonial  -------------------*/
+@import 'template/sections/testimonial';
+
+/*------------------- 4.15. Package  -------------------*/
+@import 'template/sections/package';
+
+/*------------------- 4.16. Work Process  -------------------*/
+@import 'template/sections/work-process';
+
+/*------------------- 4.17. Simple Sections  -------------------*/
+@import 'template/sections/simple-sections';
+
+/*------------------- 4.18. Offers  -------------------*/
+@import 'template/sections/offers';
+
+/*------------------- 4.19. Counter  -------------------*/
+@import 'template/sections/counter';
+
+/*------------------- 4.20. Wocommerce  -------------------*/
+@import 'template/sections/woocommerce';
+
+/*------------------- 4.21. Products  -------------------*/
+@import 'template/sections/products';
+
+/*------------------- 4.22. Trends  -------------------*/
+@import 'template/sections/trends';
+
+/*------------------- 4.23. Gallery  -------------------*/
+@import 'template/sections/gallery';
+
+/*------------------- 4.24. Error  -------------------*/
+@import 'template/sections/error';
+
+/*------------------- 4.25. Find Salon  -------------------*/
+@import 'template/sections/find-salon';
+
+/*------------------- 4.26. Service Area  -------------------*/
+@import 'template/sections/service';
+
+/*------------------- 4.27. Form Styles  -------------------*/
+@import 'template/sections/form';
+
+/*------------------- 4.28. Feature  -------------------*/
+@import 'template/sections/feature';
+
+/*------------------- 4.29. Popup Side Menu  -------------------*/
+@import 'template/sections/sidemenu-v1';
+
+/*------------------- 8.30. Popup Search  -------------------*/
+@import 'template/sections/popupsearch-v1';
+
+
+/*=================================
+    05. Spacing
+==================================*/
+@import 'spacing/spacing';
